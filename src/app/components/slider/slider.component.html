@@ -1,0 +1,14 @@
+<div class="slider container mt-5">
+    <div class="slider-wrap">
+        <div class="slider-wrap-main">
+            <div class="slider-wrap-main-item" *ngFor="let slide of datas.results.slice(0,10) , let i = index">
+                <img class="slider-wrap-main-item-img" src="{{ imageApi + slide.poster_path }}" alt="poster">
+                <div class="slider-wrap-main-item-number">{{i + 1}}</div>
+            </div>
+        </div>
+        <div class="slider-wrap-buttons">
+            <i class="fa-solid fa-chevron-left prev" appPrev></i>
+            <i class="fa-solid fa-chevron-right next" appNext></i>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-    this.service.getSliderData()
+    this.service.getPopularData()
       .subscribe(res => {
           this.datas = res;
           console.log(this.datas.results)

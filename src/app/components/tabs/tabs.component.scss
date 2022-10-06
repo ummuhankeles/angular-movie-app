@@ -1,0 +1,37 @@
+.tabs {
+    height: 43px;
+    &-items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        li {
+            list-style: none;
+            width: 150px;
+            height: 43px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            cursor: pointer;
+            &:hover {
+                color: rgb(165, 165, 165);
+                transition: all 0.3s ease-in;
+            }
+        }
+        .active {
+            border-bottom: 4px solid #3A3F47;
+        }
+    }
+    .tab-items-content {
+        &-images {
+            .tab-items-content-img {
+                width: 100%;
+                border-radius: 16px;
+            }
+        }
+    }
+}

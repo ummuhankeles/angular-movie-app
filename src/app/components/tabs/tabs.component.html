@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row tabs">
+        <ul class="tabs-items text-white">
+            <li id="now-playing" [class.active] = "id === 'now-playing'" (click)="tabChange('now-playing')">Now Playing</li>
+            <li id="up-coming" [class.active] = "id === 'up-coming'" (click)="tabChange('up-coming')">Up Coming</li>
+            <li id="top-rated" [class.active] = "id === 'top-rated'" (click)="tabChange('top-rated')">Top Rated</li>
+            <li id="popular" [class.active] = "id === 'popular'" (click)="tabChange('popular')">Popular</li>
+        </ul>
+        <div class="tab-items-content text-white">
+            <div class="tab-items-content-images" *ngIf="id === 'now-playing'">
+                <div class="row">
+                    <div class="col-md-3 mb-3" *ngFor="let nowPlaying of nowPlayingDatas.results">
+                        <img class="tab-items-content-img" src="{{ imageApi + nowPlaying.poster_path }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-items-content-images" *ngIf="id === 'up-coming'">
+                <div class="row">
+                    <div class="col-md-3 mb-3" *ngFor="let upComing of upComingDatas.results">
+                        <img class="tab-items-content-img" src="{{ imageApi + upComing.poster_path }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-items-content-images" *ngIf="id === 'top-rated'">
+                <div class="row">
+                    <div class="col-md-3 mb-3" *ngFor="let topRated of topRatedDatas.results">
+                        <img class="tab-items-content-img" src="{{ imageApi + topRated.poster_path }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-items-content-images" *ngIf="id === 'popular'">
+                <div class="row">
+                    <div class="col-md-3 mb-3" *ngFor="let popular of popularDatas.results">
+                        <img class="tab-items-content-img" src="{{ imageApi + popular.poster_path }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

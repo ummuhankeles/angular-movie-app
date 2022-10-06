@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #242A32;
     font-family: 'Montserrat';

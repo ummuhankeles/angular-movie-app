@@ -7,26 +7,32 @@ import { HttpClient } from '@angular/common/http';
 export class ServiceService {
 
   apiKey = "2937a1755f75e11815ec137a11f8c4b3";
-  popularApiURL = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}`;
-  nowPlayingApiURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${this.apiKey}`;
-  upComingApiUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}`;
-  topRatedApiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}`;
+  apiURL = `https://api.themoviedb.org/3/movie/`;
 
   constructor(private http: HttpClient) { }
 
   getPopularData() {
-    return this.http.get(this.popularApiURL);
+    let newPath = this.apiURL + `popular?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
   }
 
   getNowPlayingData() {
-    return this.http.get(this.nowPlayingApiURL);
+    let newPath = this.apiURL + `now_playing?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
   }
 
   getUpComingData() {
-    return this.http.get(this.upComingApiUrl);
+    let newPath = this.apiURL + `upcoming?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
   }
 
   getTopRatedData() {
-    return this.http.get(this.topRatedApiUrl);
+    let newPath = this.apiURL + `top_rated?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
+  }
+
+  getMovieById(movie_id: number) {
+    let newPath = this.apiURL + `${movie_id}?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
   }
 }

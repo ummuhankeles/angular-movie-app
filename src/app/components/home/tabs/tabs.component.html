@@ -9,28 +9,28 @@
         <div class="tab-items-content text-white">
             <div class="tab-items-content-images" *ngIf="id === 'now-playing'">
                 <div class="row">
-                    <div class="col-md-3 mb-3" *ngFor="let nowPlaying of nowPlayingDatas.results">
+                    <div class="col-md-3 mb-3" *ngFor="let nowPlaying of nowPlayingData.results" routerLink="/movie/{{nowPlaying.id}}" >
                         <img class="tab-items-content-img" src="{{ imageApi + nowPlaying.poster_path }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="tab-items-content-images" *ngIf="id === 'up-coming'">
                 <div class="row">
-                    <div class="col-md-3 mb-3" *ngFor="let upComing of upComingDatas.results">
+                    <div class="col-md-3 mb-3" *ngFor="let upComing of upComingData.results" routerLink="/movie/{{upComing.id}}">
                         <img class="tab-items-content-img" src="{{ imageApi + upComing.poster_path }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="tab-items-content-images" *ngIf="id === 'top-rated'">
                 <div class="row">
-                    <div class="col-md-3 mb-3" *ngFor="let topRated of topRatedDatas.results">
+                    <div class="col-md-3 mb-3" *ngFor="let topRated of topRatedData.results" routerLink="/movie/{{topRated.id}}">
                         <img class="tab-items-content-img" src="{{ imageApi + topRated.poster_path }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="tab-items-content-images" *ngIf="id === 'popular'">
                 <div class="row">
-                    <div class="col-md-3 mb-3" *ngFor="let popular of popularDatas.results">
+                    <div class="col-md-3 mb-3" *ngFor="let popular of popularData.results" routerLink="/movie/{{popular.id}}">
                         <img class="tab-items-content-img" src="{{ imageApi + popular.poster_path }}" alt="">
                     </div>
                 </div>

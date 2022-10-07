@@ -1,0 +1,160 @@
+.movie-background-image {
+    img {
+        width: 100%;
+        border-radius: 16px;
+        height: 400px;
+    }
+}
+
+.movie-banner{
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-evenly;
+    top: -200px;
+    &-image{
+        width: 30%;
+        img {
+            width: 100%;
+            height: 400px;
+            border-radius: 16px;
+        }
+    }
+    &-title {
+        width: 60%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        h1 {
+            font-size: 56px;
+            line-height: 90px;
+            width: 100%;
+        }
+        .movie-rate {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 150px;
+            &-button {
+                width: 64px;
+                height: 34px;
+                border-radius: 8px;
+                background-color: #252836;
+                color: #FF8700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+
+.movie-info {
+    position: relative;
+    top: -100px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    color: #92929D;
+    font-weight: 500px;
+    font-size: 20px;
+    div {
+        width: fit-content;
+        padding: 10px 30px;
+        border-right: 2px solid #92929D;
+    }
+}
+
+.movie-tabs {
+    height: 43px;
+    &-items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        li {
+            list-style: none;
+            width: 150px;
+            height: 43px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            cursor: pointer;
+            &:hover {
+                color: rgb(165, 165, 165);
+                transition: all 0.3s ease-in;
+            }
+        }
+        .active {
+            border-bottom: 4px solid #3A3F47;
+        }
+    }
+    &-content {
+        &-overview {
+            &-text {
+                font-weight: 400px;
+                font-size: 16px;
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
+        }
+        &-reviews {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &-box {
+                display: flex;
+                flex-direction: row;
+                &-left {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 10%;
+                    &-profile {
+                        i {
+                            font-size: 56px;
+                            color: #59405c;
+                        }
+                    }
+                    &-rate {
+                        color: #0296E5;
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+                }
+                &-right {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        &-cast {
+            &-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &-profile {
+                    i {
+                        font-size: 76px;
+                        color: #59405c;
+                    }
+                }
+                &-name {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

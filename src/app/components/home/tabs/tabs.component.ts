@@ -8,41 +8,56 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class TabsComponent implements OnInit {
 
-  nowPlayingDatas: any = [];
-  upComingDatas: any = [];
-  topRatedDatas: any = [];
-  popularDatas: any = [];
+  datas: any = [];
+  nowPlayingData: any = [];
+  upComingData: any = [];
+  popularData: any = [];
+  topRatedData: any = [];
   imageApi = "https://image.tmdb.org/t/p/w1280"
 
-  constructor(private service: ServiceService) { }
+  constructor(
+    private service: ServiceService
+  ) { }
 
   ngOnInit(): void {
+    this.getNowPlayingData();
+    this.getUpComingData();
+    this.getTopRatedData();
+    this.getPopularData();
+  }
+
+  getNowPlayingData() {
     this.service.getNowPlayingData()
       .subscribe(res => {
-          this.nowPlayingDatas = res;
-          console.log(this.nowPlayingDatas.results)
+          this.nowPlayingData = res;
       })
+  }
+
+  getUpComingData() {
     this.service.getUpComingData()
       .subscribe(res => {
-          this.upComingDatas = res;
-          console.log(this.upComingDatas.results)
+          this.upComingData = res;
       })
-    this.service.getTopRatedData()
-      .subscribe(res => {
-          this.topRatedDatas = res;
-          console.log(this.topRatedDatas.results)
-      })
+  }
+
+  getPopularData() {
     this.service.getPopularData()
       .subscribe(res => {
-          this.popularDatas = res;
-          console.log(this.popularDatas.results)
+          this.popularData = res;
+      })
+  }
+
+  getTopRatedData() {
+    this.service.getTopRatedData()
+      .subscribe(res => {
+          this.topRatedData = res;
       })
   }
 
   id: any = "now-playing"
   tabChange(ids: any) {
     this.id = ids;
-    console.log(this.id);
+    console.log(this.id)
   }
 
 }

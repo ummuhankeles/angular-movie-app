@@ -75,6 +75,7 @@
         align-items: center;
         justify-content: flex-start;
         padding: 0;
+        margin: 0;
         li {
             list-style: none;
             width: 150px;
@@ -97,6 +98,7 @@
         }
     }
     &-content {
+        padding: 35px 0px;
         &-overview {
             &-text {
                 font-weight: 400px;
@@ -153,6 +155,168 @@
                 &-name {
                     font-size: 16px;
                     letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .movie-background-image {
+        img {
+            width: 100%;
+            height: 210px;
+        }
+    }
+    .movie-banner {
+        width: 100%;
+        position: relative;
+        display: inline-flex;
+        justify-content: space-evenly;
+        top: -60px;
+        &-image {
+            width: 30%;
+            img {
+                width: 100%;
+                height: 120px;
+                border-radius: 16px;
+            }
+        }
+        &-title {
+            width: 60%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            h1 {
+                font-size: 18px;
+                line-height: 27px;
+                width: 100%;
+            }
+            .movie-rate {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+                &-button {
+                    width: 54px;
+                    height: 24px;
+                    border-radius: 8px;
+                    background-color: #252836;
+                    color: #FF8700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4px 8px;
+                }
+            }
+        }
+    }
+    .movie-info {
+        position: relative;
+        top: 0px;
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        color: #92929D;
+        font-weight: 500px;
+        font-size: 12px;
+        div {
+            width: fit-content;
+            padding: 10px 10px;
+            border-right: 1px solid #92929D;
+        }
+    }
+    .movie-tabs {
+        height: 43px;
+        margin-top: 50px;
+        &-items {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                width: 150px;
+                height: 43px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+                cursor: pointer;
+                &:hover {
+                    color: rgb(165, 165, 165);
+                    transition: all 0.3s ease-in;
+                }
+            }
+            .active {
+                border-bottom: 4px solid #3A3F47;
+            }
+        }
+        &-content {
+            padding: 35px 0px;
+            &-overview {
+                &-text {
+                    font-weight: 400px;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    line-height: 18px;
+                }
+            }
+            &-reviews {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &-box {
+                    display: flex;
+                    flex-direction: row;
+                    &-left {
+                        width: 20%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &-profile {
+                            i {
+                                font-size: 44px;
+                                color: #59405c;
+                            }
+                        }
+                        &-rate {
+                            color: #0296E5;
+                            font-weight: 500;
+                            font-size: 12px;
+                        }
+                    }
+                    &-right {
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+            &-cast {
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &-profile {
+                        i {
+                            font-size: 76px;
+                            color: #59405c;
+                        }
+                    }
+                    &-name {
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }

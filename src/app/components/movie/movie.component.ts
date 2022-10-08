@@ -10,7 +10,8 @@ import { ServiceService } from 'src/app/services/service.service';
 export class MovieComponent implements OnInit {
 
   datas: any = [];
-  imageApi = "https://image.tmdb.org/t/p/w1280"
+  reviewsData: any = [];
+  imageApi = "https://image.tmdb.org/t/p/w1280";
 
   constructor(private service: ServiceService,
     private activatedRoute: ActivatedRoute) { }
@@ -18,6 +19,7 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.getMovieById(params['movie_id']);
+      this.getReviews(params['movie_id']);
     }) 
   }
 
@@ -25,7 +27,14 @@ export class MovieComponent implements OnInit {
     this.service.getMovieById(movie_id)
       .subscribe(res => {
         this.datas = res;
-        console.log(this.datas)
+      })
+  }
+
+  getReviews(movie_id: number) {
+    this.service.getReviews(movie_id)
+      .subscribe(res => {
+        this.reviewsData = res;
+        console.log(this.reviewsData)
       })
   }
 

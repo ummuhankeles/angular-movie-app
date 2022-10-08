@@ -39,35 +39,24 @@
                 </div>
             </div>
             <div class="movie-tabs-content-reviews" *ngIf="id === 'reviews'">
-                <div class="movie-tabs-content-reviews-box mb-5">
-                    <div class="movie-tabs-content-reviews-box-left">
-                        <div class="movie-tabs-content-reviews-box-left-profile mb-3">
-                            <!-- <img src="" alt=""> -->
-                            <i class="fa-solid fa-user"></i>
+                <div *ngIf="reviewsData.results.length !== 0">
+                    <div class="movie-tabs-content-reviews-box mb-5" *ngFor="let review of reviewsData.results">
+                        <div class="movie-tabs-content-reviews-box-left">
+                            <div class="movie-tabs-content-reviews-box-left-profile mb-3">
+                                <img src="{{imageApi + review.author_details.avatar_path}}" alt="">
+                            </div>
+                            <div class="movie-tabs-content-reviews-box-left-rate">{{review.author_details.rating}}</div>
                         </div>
-                        <div class="movie-tabs-content-reviews-box-left-rate">6.5</div>
-                    </div>
-                    <div class="movie-tabs-content-reviews-box-right">
-                        <div class="movie-tabs-content-reviews-right-box-name mb-3">Iqbal Shafiq Rozaan</div>
-                        <div class="movie-tabs-content-reviews-right-box-comment">
-                            From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government.
+                        <div class="movie-tabs-content-reviews-box-right">
+                            <div class="movie-tabs-content-reviews-right-box-name mb-3">{{review.author}}</div>
+                            <div class="movie-tabs-content-reviews-right-box-comment">
+                                {{review.content}}
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="movie-tabs-content-reviews-box mb-5">
-                    <div class="movie-tabs-content-reviews-box-left">
-                        <div class="movie-tabs-content-reviews-box-left-profile mb-3">
-                            <!-- <img src="" alt=""> -->
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="movie-tabs-content-reviews-box-left-rate">6.5</div>
-                    </div>
-                    <div class="movie-tabs-content-reviews-box-right">
-                        <div class="movie-tabs-content-reviews-right-box-name mb-3">Iqbal Shafiq Rozaan</div>
-                        <div class="movie-tabs-content-reviews-right-box-comment">
-                            From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government.
-                        </div>
-                    </div>
+                <div *ngIf="reviewsData.results.length === 0">
+                    <h2>No reviews yet.</h2>
                 </div>
             </div>
             <div class="movie-tabs-content-cast" *ngIf="id === 'cast'">

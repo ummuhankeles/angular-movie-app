@@ -35,4 +35,9 @@ export class ServiceService {
     let newPath = this.apiURL + `${movie_id}?api_key=${this.apiKey}`;
     return this.http.get(newPath);
   }
+
+  getReviews(movie_id: number) {
+    let newPath = this.apiURL + `${movie_id}/reviews?api_key=${this.apiKey}`;
+    return this.http.get(newPath);
+  }
 }

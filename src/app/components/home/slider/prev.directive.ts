@@ -11,7 +11,7 @@ export class PrevDirective {
   prevFunction() {
     let element = this.el.nativeElement.parentElement.parentElement.children[0];
     let item = element.querySelectorAll(".slider-wrap-main-item");
-    console.log(element.prepend(item[item.length-1]));
+    element.prepend(item[item.length-1]);
   }
 
 }

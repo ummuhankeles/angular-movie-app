@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MovieComponent } from './components/movie/movie.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { HomeComponent } from './components/home/home.component';
     PrevDirective,
     TabsComponent,
     MovieComponent,
-    HomeComponent
+    HomeComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

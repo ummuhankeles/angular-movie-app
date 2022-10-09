@@ -8,7 +8,6 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class TabsComponent implements OnInit {
 
-  datas: any = [];
   nowPlayingData: any = [];
   upComingData: any = [];
   popularData: any = [];
@@ -57,7 +56,6 @@ export class TabsComponent implements OnInit {
   id: any = "now-playing"
   tabChange(ids: any) {
     this.id = ids;
-    console.log(this.id)
   }
 
 }

@@ -27,6 +27,7 @@ export class FilterComponent implements OnInit {
     this.service.getSearchMovie(query)
     .subscribe(res => {
       this.datas = res;
+      console.log(this.datas)
     })
   }
 

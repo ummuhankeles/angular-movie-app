@@ -1,9 +1,9 @@
 <div class="container mt-5">
     <div *ngIf="datas.results.length !== 0">
         <div class="filter-movies row mt-5">
-            <div class="filter-movies-items col-lg-6 col-sm-12 mb-3" *ngFor="let item of datas.results" routerLink="/movie/{{item.id}}">
+            <div class="filter-movies-items col-lg-6 col-sm-12 mb-3" *ngFor="let item of datas.results">
                 <div class="filter-movies-items-image" >
-                    <img src="{{imageApi + item.poster_path}}" alt="">
+                    <img routerLink="/movie/{{item.id}}" src="{{imageApi + item.poster_path}}" alt="">
                 </div>
                 <div class="filter-movies-items-desc">
                     <div class="filter-movies-items-desc-title">

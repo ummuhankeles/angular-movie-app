@@ -8,7 +8,7 @@
         </div>
         <div class="movie-banner-title">
             <div class="movie-rate">
-                <div class="movie-rate-button">
+                <div (click)="openDialog('1500ms', '1000ms')" class="movie-rate-button">
                     <i class="fa-regular fa-star"></i>&nbsp;&nbsp;{{datas.vote_average.toFixed(1)}}
                 </div>
             </div>

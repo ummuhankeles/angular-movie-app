@@ -1,0 +1,24 @@
+.rate-title {
+    h1 {
+        color: #4E4B66;
+    }
+}
+
+.rate-star {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate-submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    background-color: #0296E5;
+    border-radius: 28px;
+    cursor: pointer;
+    h3 {
+        margin: 0;
+        color: #fff;
+    }
+}

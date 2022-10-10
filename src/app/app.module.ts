@@ -15,6 +15,9 @@ import { MovieComponent } from './components/movie/movie.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './components/filter/filter.component';
+import { RateModalComponent } from './components/rate-modal/rate-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BarRatingModule } from "ngx-bar-rating";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { FilterComponent } from './components/filter/filter.component';
     TabsComponent,
     MovieComponent,
     HomeComponent,
-    FilterComponent
+    FilterComponent,
+    RateModalComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { FilterComponent } from './components/filter/filter.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    BarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

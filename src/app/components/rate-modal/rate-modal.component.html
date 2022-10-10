@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="rate-title mb-4">
+        <h1>Rate this movie</h1>
+    </div>
+    <div class="rate-star mb-4">
+        <bar-rating [rate]="rating" [max]="5">
+            <ng-template ratingInactive>
+                <i class="fa-solid fa-star fa-2x" style="color: #d2d2d2"></i>
+            </ng-template>
+            <ng-template ratingActive>
+                <i class="fa-solid fa-star fa-2x" style="color: #edb867"></i>
+            </ng-template>
+        </bar-rating>
+    </div>
+    <div class="rate-submit-button">
+        <h3>OK</h3>
+    </div>
+</div>

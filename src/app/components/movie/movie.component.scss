@@ -38,6 +38,7 @@
             justify-content: flex-end;
             margin-top: 150px;
             &-button {
+                cursor: pointer;
                 width: 64px;
                 height: 34px;
                 border-radius: 8px;
@@ -201,6 +202,7 @@
                 justify-content: flex-end;
                 margin-top: 20px;
                 &-button {
+                    cursor: pointer;
                     width: 54px;
                     height: 24px;
                     border-radius: 8px;

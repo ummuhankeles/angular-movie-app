@@ -1,7 +1,7 @@
 <div class="slider container mt-5">
     <div class="slider-wrap">
         <div class="slider-wrap-main">
-            <div class="slider-wrap-main-item" appSlideDirective *ngFor="let slide of datas.results.slice(0,10) , let i = index">
+            <div routerLink="/movie/{{slide.id}}" class="slider-wrap-main-item" appSlideDirective *ngFor="let slide of datas.results.slice(0,10) , let i = index">
                 <img class="slider-wrap-main-item-img" src="{{ imageApi + slide.poster_path }}" alt="poster">
                 <span class="slider-wrap-main-item-number">{{i + 1}}</span>
             </div>

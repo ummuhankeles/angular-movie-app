@@ -9,7 +9,7 @@ import { ServiceService } from 'src/app/services/service.service';
 export class SliderComponent implements OnInit {
 
   datas: any = [];
-  imageApi = "https://image.tmdb.org/t/p/w1280"
+  imageApi = "https://image.tmdb.org/t/p/w1280";
 
   constructor(private service: ServiceService) { }
 

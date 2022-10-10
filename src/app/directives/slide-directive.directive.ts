@@ -7,7 +7,7 @@ export class SlideDirectiveDirective {
 
   constructor(private el: ElementRef) { }
 
-  @HostListener('mousedown')
+  @HostListener('drag')
   prevFunction() {
     let element = this.el.nativeElement.parentElement.parentElement.children[0];
     let item = element.querySelectorAll(".slider-wrap-main-item");

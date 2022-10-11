@@ -1,3 +1,20 @@
+.movie-save-watchlist {
+    width: 96.5%;
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    i {
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        &:hover {
+            color: #FF8700;
+            transition: all 0.3s ease-in;
+        }
+    }
+}
+
 .movie-background-image {
     img {
         width: 100%;

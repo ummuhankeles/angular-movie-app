@@ -13,6 +13,7 @@ export class MovieComponent implements OnInit {
 
   datas: any = [];
   reviewsData: any = [];
+  localStorageData: any = [];
   imageApi = "https://image.tmdb.org/t/p/w1280";
 
   constructor(private service: ServiceService,
@@ -21,10 +22,11 @@ export class MovieComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.setItems();
     this.activatedRoute.params.subscribe(params => {
       this.getMovieById(params['movie_id']);
       this.getReviews(params['movie_id']);
-    }) 
+    })
   }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string){
@@ -54,6 +56,21 @@ export class MovieComponent implements OnInit {
   tabChange(ids: any) {
     this.id = ids;
     console.log(this.id)
+  }
+
+  addStorage(item: any) {
+    this.localStorageData.push(item);
+    localStorage.setItem('localStorageData', JSON.stringify(this.localStorageData));
+    // let element = document.querySelector(".movie-save-watchlist i");
+    // element?.setAttribute('style', 'color: #FF8700;');
+  }
+
+  setItems() {
+    if (!localStorage.getItem('localStorageData')) {
+      localStorage.setItem('localStorageData', JSON.stringify(this.localStorageData));
+    } else {
+      this.localStorageData = JSON.parse(localStorage.getItem('localStorageData')!);
+    }
   }
 
 }

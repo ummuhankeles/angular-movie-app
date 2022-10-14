@@ -12,7 +12,7 @@
         <div class="movie-banner-title">
             <div class="movie-rate">
                 <div (click)="openDialog('1500ms', '1000ms')" class="movie-rate-button">
-                    <i class="fa-regular fa-star"></i>&nbsp;&nbsp;{{datas.vote_average.toFixed(1)}}
+                    <i class="fa-regular fa-star"></i>&nbsp;&nbsp;{{datas?.vote_average?.toFixed(1)}}
                 </div>
             </div>
             <h1>{{datas.title}}</h1>
@@ -20,7 +20,7 @@
     </div>
     <div class="movie-info">
         <div class="movie-info-date">
-            <i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;{{datas.release_date.slice(0,4)}}
+            <i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;{{datas?.release_date?.slice(0,4)}}
         </div>
         <div class="movi-info-hour">
             <i class="fa-regular fa-clock"></i>&nbsp;&nbsp;{{datas.runtime}}&nbsp;Minutes

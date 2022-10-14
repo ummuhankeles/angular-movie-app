@@ -41,6 +41,7 @@ export class MovieComponent implements OnInit {
     this.service.getMovieById(movie_id)
       .subscribe(res => {
         this.datas = res;
+        console.log(this.datas)
       })
   }
 
@@ -48,7 +49,6 @@ export class MovieComponent implements OnInit {
     this.service.getReviews(movie_id)
       .subscribe(res => {
         this.reviewsData = res;
-        console.log(this.reviewsData)
       })
   }
 

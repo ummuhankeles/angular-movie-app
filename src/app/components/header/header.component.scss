@@ -50,6 +50,9 @@ header {
             }
         }
     }
+    .header-mobile-menu-bar {
+        display: none;
+    }
 }
 
 .header-mobile-menu {
@@ -83,6 +86,7 @@ header {
             display: none;
         }
         .header-mobile-menu-bar {
+            display: block;
             i {
                 display: flex;
                 align-items: center;

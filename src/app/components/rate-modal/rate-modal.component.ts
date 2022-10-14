@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-rate-modal',
@@ -9,10 +10,14 @@ export class RateModalComponent implements OnInit {
 
   rating = 1;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
+  }
+
+  closeModal() {
+    this.dialog.closeAll();
   }
 
 }

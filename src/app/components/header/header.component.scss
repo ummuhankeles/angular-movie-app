@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     align-items: center;
     .header-brand {
+        cursor: pointer;
         &-items {
             display: flex;
             align-items: center;

@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <div *ngIf="datas.results.length !== 0">
+    <div *ngIf="datas?.results?.length !== 0">
         <div class="filter-movies row mt-5">
             <div class="filter-movies-items col-lg-6 col-sm-12 mb-3" *ngFor="let item of datas.results">
                 <div class="filter-movies-items-image" >
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="text-white" *ngIf="datas.results.length === 0">
+    <div class="text-white" *ngIf="datas?.results?.length === 0">
         <div class="search-no-result">
             <i class="fa-brands fa-searchengin mb-5"></i>
             <p class="search-no-result-first mb-5">we are sorry, we can<br/>not find the movie :(</p>

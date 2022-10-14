@@ -1,0 +1,31 @@
+<header class="container">
+    <div class="header-brand">
+        <div class="header-brand-items">
+            <i class="fa-solid fa-video"></i>
+            <span>Best Movies</span>
+        </div>
+    </div>
+    <div class="header-links">
+        <ul class="header-links-items">
+            <li>
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+            <li>
+                <a routerLink="/watch-list" routerLinkActive="active">Watch List</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header-mobile-menu-bar" (click)="showNav()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>
+<div class="header-mobile-menu" [class.show-nav]="isShow == true">
+    <ul class="header-mobile-menu-items">
+        <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li>
+            <a routerLink="/watch-list" routerLinkActive="active">Watch List</a>
+        </li>
+    </ul>
+</div>

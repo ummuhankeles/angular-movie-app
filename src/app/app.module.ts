@@ -17,6 +17,7 @@ import { RateModalComponent } from './components/rate-modal/rate-modal.component
 import { MatDialogModule } from '@angular/material/dialog';
 import { BarRatingModule } from "ngx-bar-rating";
 import { SlideDirectiveDirective } from './directives/slide-directive.directive';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SlideDirectiveDirective } from './directives/slide-directive.directive'
     HomeComponent,
     FilterComponent,
     RateModalComponent,
-    SlideDirectiveDirective
+    SlideDirectiveDirective,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
